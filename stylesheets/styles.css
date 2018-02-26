@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
 .carousel {
     position: relative;
 }
@@ -42,4 +47,31 @@
 .carousel label.currentSelection {
     background-color: #FFF;
     border: thin solid#9E9E9E;
+}
+
+.commentList {
+    background-color: #8080800f;
+    padding: 16px;
+}
+
+.userComment {
+    list-style: none;
+    border: thin solid #e2e2e2;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-left: thick solid pink;
+    background-color: #FFFFFF;
+}
+
+.userComment-username {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.userComment-date {
+    color: #cccccc;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
 }
