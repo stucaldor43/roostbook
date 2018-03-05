@@ -75,3 +75,67 @@ html {
     font-family: 'Playfair Display', serif;
     font-style: italic;
 }
+
+.calendar {
+    display: inline-block;
+    border: thin solid #e5e5e5;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+@media (min-width: 573px) {
+    .calendar {
+        padding: 32px;
+    }
+}
+
+.calendar-table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.calendar-date, .calendar-day {
+    width: 44px;
+    height: 40px;
+}
+
+.calendar-date {
+    border: thin solid #e5e5e5;
+}
+
+.calendar-date:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.calendar-controlsContainer {
+    position: relative;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.calendar-controlsContainer i {
+    font-size: 18px;
+    padding: 2px 8px;
+    border: thin solid #e5e5e5;
+    color: #adabab;
+    border-radius: 4px;
+}
+
+.calendar-controlsContainer:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.calendar-control:hover {
+    background-color: #eee;
+}
+
+.calendar-previousMonthControl {
+    float: left;
+}
+
+.calendar-nextMonthControl {
+    float: right;
+}
