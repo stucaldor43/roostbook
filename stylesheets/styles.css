@@ -139,3 +139,7 @@ html {
 .calendar-nextMonthControl {
     float: right;
 }
+
+[class*='icon-star'] {
+    color: gold;
+}
