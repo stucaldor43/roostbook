@@ -143,3 +143,20 @@ html {
 [class*='icon-star'] {
     color: gold;
 }
+
+.pagination-link {
+    color: #008489;
+    border: 2px solid #e5e5e5;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border 0.3s ease;
+}
+
+.pagination-link:hover {
+    border: 2px solid #cccbcb;
+}
+
+.pagination-link, .pagination-ellipsis {
+    padding: 8px 12px;
+    margin-right: 12px;
+}
