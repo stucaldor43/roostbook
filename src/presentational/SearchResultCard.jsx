@@ -6,18 +6,20 @@ import stars from './../helpers/stars';
 const SearchResultCard = ({room, url}) => {
     return (
         <div className="listing">
-            <Link to={url}>
-                <CarouselContainer/>
-                <div>
-                    <div className="listing-categories">{ room.style } <span className="square">&#9642;</span> { room.location }</div>
+            <CarouselContainer/>
+            <div>
+                <Link to={url}>
+                    <div className="listing-categories">
+                        <span className="listing-type">{ room.style }</span><span className="listing-location">{ room.location }</span>
+                    </div>
                     <h2 className="listing-title">{ room.title }</h2>
                     <p className="listing-price">${ room.price } per night</p>
                     <div className="listing-details">
                         { stars(5) }
                         <span className="listing-reviewCount">{ room.reviews }</span>
                     </div>
-                </div>
-            </Link>
+                </Link>
+            </div>
         </div>
     );
 } 
