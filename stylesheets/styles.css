@@ -141,7 +141,8 @@ html {
 }
 
 [class*='icon-star'] {
-    color: gold;
+    color: #5b5da9;
+    font-size: 10px;
 }
 
 .pagination-link {
@@ -159,4 +160,46 @@ html {
 .pagination-link, .pagination-ellipsis {
     padding: 8px 12px;
     margin-right: 12px;
+}
+
+.listing {
+    line-height: 24px;
+}
+
+.listing a {
+    text-decoration: none;
+}
+
+.listing .carousel-slide img {
+    border-radius: 4px;
+}
+
+.listing .carousel-labelContainer {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.listing-categories {
+    margin-bottom: 8px;
+    color: #5b5da9;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.listing-title, .listing-price {
+    margin: 0;
+}
+
+.listing-title {
+    margin-bottom: 4px;
+    color: #3a3939;
+}
+.listing-price {
+    color: #7b7a7a;
+}
+
+.listing-details {
+    color: #5b5da9;
 }
