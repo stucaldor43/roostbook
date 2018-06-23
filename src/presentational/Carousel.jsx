@@ -1,4 +1,5 @@
 import React from 'react';
+import './../../stylesheets/components/Carousel/styles.css';
 
 const Carousel = ({imageURLs, highlightLabel, currentSlide, id}) => {
     const produceSlide = (url, index) => {

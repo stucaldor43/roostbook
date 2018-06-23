@@ -1,4 +1,5 @@
 import React from 'react';
+import './../../stylesheets/components/Pagination/styles.css';
 
 const Pagination = ({url, page, maxPages}) => {
     const previousPage = (page > 1) ? <a className="pagination-previousPageLink pagination-link" 

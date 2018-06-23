@@ -1,6 +1,6 @@
 import React from 'react';
 
-const stars = (starCount, opts) => {
+const stars = (starCount, opts={}) => {
     const starContainer = [];
     const filledStars = opts.filled || starCount;
     for (let i = 0; i < starCount; i++) {

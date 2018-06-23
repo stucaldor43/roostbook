@@ -1,0 +1,41 @@
+.carousel {
+    position: relative;
+}
+
+.carousel-shelf {
+    height: 534px;
+}
+
+.carousel-slide {
+    position: absolute;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 534px;
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.carousel-slide input:checked + img {
+    opacity: 1;
+}
+
+.carousel-slide input[type="radio"] {
+    display: none;
+}
+
+.carousel label {
+    width: 8px;
+    height: 8px;
+    background-color: #9E9E9E;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.carousel label.currentSelection {
+    background-color: #FFF;
+    border: thin solid#9E9E9E;
+}

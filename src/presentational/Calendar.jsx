@@ -1,5 +1,6 @@
 import React from 'react';
 import DAYS_OF_THE_WEEK from './../constants/days';
+import './../../stylesheets/components/Calendar/styles.css';
 
 const Calendar = ({lastDayOfPreviousMonth, lastDayOfCurrentMonth, daysInMonth, month, clickHandler, year, nextMonth, previousMonth}) => {
     let dateDataCells = [];

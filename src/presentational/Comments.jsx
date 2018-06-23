@@ -1,4 +1,5 @@
 import React from 'react';
+import './../../stylesheets/components/Comments/styles.css';
 
 const Comments = ({comments}) => {
     const commentItems = comments.map((comment) => (

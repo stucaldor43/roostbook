@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import CarouselContainer from './../containers/CarouselContainer.jsx';
 import stars from './../helpers/stars';
+import './../../stylesheets/components/SearchResultCard/styles.css';
 
 const SearchResultCard = ({room, url}) => {
     return (
