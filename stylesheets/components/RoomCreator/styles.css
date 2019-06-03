@@ -1,0 +1,118 @@
+.createRoom.page {
+    display: flex; 
+}
+
+.createRoomWindow-tabList {
+    display: none;
+    list-style: none;
+    margin-right: 32px;
+    font-weight: 600;
+}
+
+@media (min-width: 800px) {
+    .createRoomWindow-tabList {
+        display: block;
+    }
+}
+
+.createRoomWindow-tab {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.createRoomWindow-tab:hover {
+    color: #c5c5c5
+}
+
+.createRoomWindow {
+    background-color: #fff;
+    border: thin solid #e5e5e5;
+    max-width: 700px;
+    margin-bottom: 16px;
+}
+
+.createRoomWindow-header {
+    background-color: green;
+    color: #fff;
+    padding: 8px 16px;
+}
+
+.createRoomWindow-contentWrapper {
+    padding: 16px 32px;
+}
+
+.createRoomWindow-input {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.createRoomWindow label {
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.listing-label {
+    width: 100%;
+    display: inline-block;
+}
+
+@media (min-width: 560px) {
+    .listing-label {
+        width: calc(25% - 16px);
+    }
+}
+
+.createRoomWindow select {
+    width: 100%;
+    margin-right: 16px;
+}
+
+.createRoomWindow select, .createRoomWindow input {
+    display: block;
+    padding: 8px 8px;
+}
+
+.createRoomWindow textarea {
+    min-height: 250px;
+}
+
+.createRoomWindow .amenities-label {
+    width: 48%;
+    display: inline-block;
+}
+
+.createRoomWindow .amenities-control {
+    display: inline-block;
+    width: auto;
+}
+
+.rommSlide-container {
+    position: relative;
+}
+
+.roomSlide {
+    opacity: 0;
+}
+
+@media (min-width: 800px) {
+    .roomSlide {
+        min-width: 550px;
+    }
+}
+
+.roomSlide-isActive {
+    opacity: 1;
+    animation: fadeIn .4s ease 0s 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
