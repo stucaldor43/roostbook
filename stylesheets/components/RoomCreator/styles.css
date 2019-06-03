@@ -2,17 +2,21 @@
     display: flex; 
 }
 
-.createRoomWindow-tabList {
-    display: none;
-    list-style: none;
+.createRoomWindow-controlsContainer {
     margin-right: 32px;
-    font-weight: 600;
+    display: none;
 }
 
 @media (min-width: 800px) {
-    .createRoomWindow-tabList {
+    .createRoomWindow-controlsContainer {
         display: block;
     }
+}
+
+.createRoomWindow-tabList {
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
 }
 
 .createRoomWindow-tab {
@@ -22,19 +26,24 @@
     transition: all 0.3s ease-out;
 }
 
-.createRoomWindow-tab:hover {
-    color: #c5c5c5
+.createRoomWindow-tab-isActive {
+    color: #898eff;
+}
+
+.createRoomWindow-tab-isInactive {
+    color: #a7abbe;
 }
 
 .createRoomWindow {
     background-color: #fff;
-    border: thin solid #e5e5e5;
     max-width: 700px;
     margin-bottom: 16px;
+    border: thin solid #eeeff5;
+    border-radius: 3px;
 }
 
 .createRoomWindow-header {
-    background-color: green;
+    background-color: #666ee8;
     color: #fff;
     padding: 8px 16px;
 }
@@ -46,6 +55,16 @@
 .createRoomWindow-input {
     width: 100%;
     margin-bottom: 16px;
+}
+
+.createRoomWindow-saveButton {
+    background-color: #898eff;
+    color: #fff;
+    padding: 8px 32px;
+    color: #fff;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
 .createRoomWindow label {
@@ -86,6 +105,20 @@
 .createRoomWindow .amenities-control {
     display: inline-block;
     width: auto;
+}
+
+.createRoomWindow-publishButton {
+    background-color: #666ee8;
+    padding: 8px 32px;
+    color: #fff;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+button:disabled {
+    opacity: 0.6;
+    transition: all 0.4s ease;
 }
 
 .rommSlide-container {
