@@ -4,7 +4,7 @@ const {
     GraphQLString,
     GraphQLID,
     GraphQLInt,
-    GraphQLFloat
+    GraphQLFloat,
 } = require('graphql');
 
 const RoomType = new GraphQLObjectType({
