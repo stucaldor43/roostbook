@@ -11,8 +11,9 @@ const createClient = {
       name: { type: GraphQLString },
       email_address: { type: GraphQLString }
     },
-    resolve(parentValue, {name, email_address}) {
-      return knex('client').insert({name, email_address});
+    async resolve(parentValue, {name, email_address}) {
+      const insertedRows = await knex('client').insert({name, email_address}, ['id', 'name', 'email_address']);
+      return insertedRows[0];
     }
 }
 

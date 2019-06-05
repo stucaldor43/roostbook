@@ -8,8 +8,8 @@ const knex = require('./../../../../knexInstance');
 const client = {
     type: ClientType,
     args: { id: { type: GraphQLID }},
-    resolve(parentValue, args) {
-      return knex.select("*").from("client").where({id: args.id}).first();
+    async resolve(parentValue, args) {
+      return await knex.select("*").from("client").where({id: args.id}).first();
     }
 };
 
