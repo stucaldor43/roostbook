@@ -2,7 +2,7 @@ const {
     graphql,
     GraphQLObjectType,
 } = require('graphql');
-const  { room, allRooms, rooms } = require('./../room').queries;
+const  { room, allRooms, rooms, filterRoomsByLatLong } = require('./../room').queries;
 const { client, allClients } = require('./../client').queries;
 
 const query = new GraphQLObjectType({
@@ -12,7 +12,8 @@ const query = new GraphQLObjectType({
       rooms,
       allRooms,
       client,
-      allClients
+      allClients,
+      filterRoomsByLatLong
     }
 });
 
