@@ -37,8 +37,12 @@ const up = function() {
 //     console.log("insert made")
 // });
 
-function check(records) {
-    console.log(records.guest_limit);
+// function check(records) {
+//     console.log(records.guest_limit);
+// };
+// knex.select("*").from("room").where({id: 1}).first()
+// .then(check);
+
+module.exports = {
+  up
 };
-knex.select("*").from("room").where({id: 1}).first()
-.then(check);
