@@ -1,13 +1,11 @@
 import React from 'react';
-import MarkerClusterer from '@google/markerclusterer';
 import { AUTO, MANUAL } from './../constants/search_modes';
 
-let map;
-
 window.initMap = () => {
-  map = new google.maps.Map(document.getElementById('map'), {
+  window.map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: 40.397, lng: -73.644 },
-    zoom: 12
+    zoom: 12,
+    keyboardShortcuts: false
   });
 };
 
@@ -31,7 +29,7 @@ class Map extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.places !== this.props.places) {
+    if (this.props.places.length && prevProps.places !== this.props.places) {
       this.markers = [];
       this.addMarkers();
     }
@@ -42,21 +40,24 @@ class Map extends React.Component {
   }
 
   init() {
-    this.map = map;
+    this.map = window.map;
     this.addMarkers();
 
     let idleCount = 0;
-    google.maps.event.addListener(map, 'idle', () => {
+    google.maps.event.addListener(this.map, 'idle', () => {
       const { mode } = this.props;
       if (idleCount > 0) {
         mode === AUTO ? null : this.props.onIdle(this.map.getBounds(), this.map.getBounds());
       }
       idleCount += 1;
     });
-    google.maps.event.addListener(map, 'click', () => {
+    google.maps.event.addListener(this.map, 'click', () => {
       this.props.changeMode(MANUAL);
     });
-    google.maps.event.addListener(map, 'dragend', () => {
+    google.maps.event.addListener(this.map, 'dragend', () => {
+      this.props.changeMode(MANUAL);
+    });
+    google.maps.event.addListener(this.map, 'zoom_changed', () => {
       this.props.changeMode(MANUAL);
     });
   }
@@ -88,11 +89,16 @@ class Map extends React.Component {
   }
 
   render() {
+    const { classes } = this.props;
+
     return (
       <div style={{ width: '100%', height: 'calc(100vh - 64px)' }}
+        className={`map ${classes ? classes : ''}`}
         id="map"
-        ref={this.setRef}></div>
+        ref={this.setRef}
+        ></div>
     );
   }
 }
+
 export default Map;
